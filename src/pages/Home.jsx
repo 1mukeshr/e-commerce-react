@@ -1,0 +1,83 @@
+import React from 'react'
+
+import ProductCard from '../component/ProductCard';
+import bannerImg from "../assets/images/banner.jpg";
+
+const Home = () => {
+  return (
+    <main>
+      <div className="bannersection">
+        <img src={bannerImg} alt="Banner" />
+        <div className="container">
+          <div className="left">
+            <h1>Expereence the Best <br />Beuty Services</h1>
+
+            <button>Shop Now</button>
+          </div>
+          <div className="right">
+
+          </div>
+        </div>
+      </div>
+      <div className="offer-section">
+        <div className="container">
+          <div className="offer-card-flex">
+            <div className="offer-card" style={{ background: "#FEEFEA " }}>
+              <h2>Everyday Fresh &
+                Clean with Our
+                Products </h2>
+
+              <button> Shop Now</button>
+            </div>
+            <div className="offer-card" style={{ background: "#ECFFEC " }}>
+              <h2>Everyday Fresh &
+                Clean with Our
+                Products </h2>
+
+              <button>Shop Now</button>
+            </div>
+            <div className="offer-card" style={{ background: "#FFFCEB  " }}>
+              <h2>Everyday Fresh &
+                Clean with Our
+                Products </h2>
+
+              <button> Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="categories-section">
+        <div className="container">
+          <div class="category-box groceries">
+            <div class="category-text">Groceries</div>
+        </div>
+        <div class="category-box beauty">
+            <div class="category-text">Beauty</div>
+        </div>
+        <div class="category-box fragrances">
+            <div class="category-text">Fragrances</div>
+        </div>
+        <div class="category-box furniture">
+            <div class="category-text">Furniture</div>
+        </div>
+        </div>
+      </div>
+      <div className="feture-section">
+
+        <div className="container">
+          <div className="product-itemlist">
+            <ProductCard />
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  )
+}
+
+export default Home
+
