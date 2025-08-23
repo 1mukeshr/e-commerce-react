@@ -1,16 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
         <footer>
             <div className="footer-container">
                 <div className="footer-section">
-                    <h3>Shop</h3>
+                    <h3>All Category</h3>
                     <ul>
-                        <li>All Products</li>
-                        <li>Categories</li>
-                        <li>New Arrivals</li>
-                        <li>Best Sellers</li>
+                        <li><Link to="/grocerycollection"> Groceries</Link></li>
+                        <li><Link to="/beatycollection"> Beauty</Link></li>
+                        <li><Link to="/fragrancecollection"> Fragrances</Link></li>
+                        <li><Link to="/furniturecollection"> Furniture</Link></li>
                     </ul>
                 </div>
                 <div className="footer-section">

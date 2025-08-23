@@ -53,7 +53,10 @@ ul {
   z-index: 1002;
 
 }
-
+.header-left{
+  display: flex;
+  column-gap: 30px;
+}
 .main-header h1 {
   font-size: 22px;
   margin: 0;
@@ -76,7 +79,9 @@ nav ul li a {
 
 .header-right {
   display: flex;
+  width: 40%;
   column-gap: 20px;
+  justify-content: end;
   align-items: center;
 }
 
@@ -184,6 +189,9 @@ nav ul li a {
   background: #fff;
   border-radius: 100px;
   padding: 10px 18px;
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
   border: 0;
   outline: none;
 
@@ -255,7 +263,9 @@ nav ul li a {
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
-  display: block;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
   margin: 0 auto;
 }
 
@@ -325,11 +335,13 @@ nav ul li a {
   color: #888;
   font-size: 1rem;
 }
+
 .discounted-price {
   color: #e44d26;
   font-size: 1em;
   font-weight: bold;
 }
+
 .discount-tag {
   background-color: #28a745;
   color: white;
@@ -423,11 +435,13 @@ nav ul li a {
 .search-bar:focus {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-.search-bar input{
+
+.search-bar input {
   border: 0;
   outline: none;
   width: 95%;
 }
+
 .search-icon {
   position: absolute;
   left: 15px;
@@ -790,6 +804,10 @@ nav ul li a {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.category-box a {
+  display: block;
+}
+
 .category-box:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -815,10 +833,12 @@ nav ul li a {
 
 .category-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   color: white;
+  width: 100%;
+  height: 100%;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
@@ -862,6 +882,29 @@ nav ul li a {
   }
 }
 
+.category-section {
+  padding-top: 100px;
+}
+
+.category-product-box {
+  border-radius: 16px;
+  background: #fff;
+  margin: 50px 0px 0px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.category-product-box h1 {
+  padding: 10px 15px;
+  margin: 0px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.category-product-box .product-itemlist {
+  padding: 10px 20px 20px;
+  background: #fafafa;
+}
+
 footer {
   background-color: #fafafa;
   color: #000;
@@ -895,11 +938,13 @@ footer {
 .footer-section ul li {
   margin-bottom: 10px;
 }
-.social-icons{
+
+.social-icons {
   display: flex;
   align-items: center;
   column-gap: 10px;
 }
+
 .social-icons svg {
   width: 22px;
   height: 22px;
@@ -935,5 +980,230 @@ footer {
 
   .social-icons a {
     margin: 0 10px;
+  }
+}
+
+/* popup */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  height: 100%;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+  margin-top: 55px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: zoomIn 0.3s ease-in;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: -25px;
+  right: -15px;
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+.popup-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 24px;
+  height: 485px;
+  overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+  .popup-inner {
+    flex-direction: row;
+  }
+}
+
+.product-detail-image {
+  flex: 1;
+  max-width: 100%;
+}
+
+.product-detail-image img {
+  width: 100%;
+  height: 384px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #e5e5e5;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.thumbnail.active {
+  border-color: #3b82f6;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-popup-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.price span {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.tab-navigation {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tab-button {
+  padding-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tab-button.active {
+  color: #3b82f6;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.tab-button:hover {
+  color: #1f2937;
+}
+
+.tab-content {
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.tab-content strong {
+  font-weight: 600;
+}
+
+.why-shop {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-shop-item p {
+  font-size: 12px;
+}
+
+.why-shop-item span:last-child strong {
+  font-weight: 600;
+}
+
+/* cart save popup */
+.cart-popup {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 280px;
+  background: #000;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease-out forwards;
+  transition: all 0.3s ease;
+}
+.cart-popup p {
+  font-size: 14px;
+  margin: 0;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
