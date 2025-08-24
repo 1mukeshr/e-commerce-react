@@ -11,6 +11,7 @@ import Fragrances from './category/Fragrances';
 import Beauty from './category/Beauty';
 import Furiture from './category/Furniture';
 import Groceries from './category/Groceries';
+import { CheckOut } from './pages/CheckOut';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/product" element={<Product />} />
           <Route path="/category" element={<Categories />}></Route>
-
+          <Route path="/checkout" element={<CheckOut />}/>
         </Routes>
         <Footer />
       </BrowserRouter>
