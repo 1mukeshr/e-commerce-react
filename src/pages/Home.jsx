@@ -13,7 +13,7 @@ const Home = () => {
           <div className="left">
             <h1>Expereence the Best <br />Beuty Services</h1>
 
-            <button>Shop Now  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <button>Shop Now  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg></button>
           </div>
@@ -30,7 +30,7 @@ const Home = () => {
                 Clean with Our
                 Products </h2>
 
-              <button> Shop Now  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+              <button> Shop Now  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg></button>
             </div>
@@ -39,7 +39,7 @@ const Home = () => {
                 Clean with Our
                 Products </h2>
 
-              <button>Shop Now  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+              <button>Shop Now  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg></button>
             </div>
@@ -48,7 +48,7 @@ const Home = () => {
                 Clean with Our
                 Products </h2>
 
-              <button> Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+              <button> Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg></button>
             </div>
@@ -58,24 +58,24 @@ const Home = () => {
 
       <div className="categories-section">
         <div className="container">
-          <div class="category-box groceries">
+          <div className="category-box groceries">
             <Link to="/grocerycollection">
-            <div class="category-text">Groceries</div>
+            <div className="category-text">Groceries</div>
             </Link>
         </div>
-        <div class="category-box beauty">
+        <div className="category-box beauty">
           <Link to="/beatycollection">
-            <div class="category-text">Beauty</div>
+            <div className="category-text">Beauty</div>
             </Link>
         </div>
-        <div class="category-box fragrances">
+        <div className="category-box fragrances">
            <Link to="/fragrancecollection" >
-            <div class="category-text">Fragrances</div>
+            <div className="category-text">Fragrances</div>
            </Link>
         </div>
-        <div class="category-box furniture">
+        <div className="category-box furniture">
           <Link to="/furniturecollection">
-            <div class="category-text">Furniture</div>
+            <div className="category-text">Furniture</div>
             </Link>
         </div>
         </div>

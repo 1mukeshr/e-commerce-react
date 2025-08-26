@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
 export default function Cart() {
@@ -7,6 +8,8 @@ export default function Cart() {
   const handleQuantityChange = (id, quantity) => {
     if (quantity >= 0) updateQuantity(id, quantity);
   };
+
+  
 
   return (
     <div className={`sidebar ${showCart ? 'active' : ''}`}>
@@ -70,9 +73,11 @@ export default function Cart() {
               </button>
             </div>
           ))}  
+
+         
           </div>      
-          <div className="sidebar-bottom">
-          <button className="proceed-btn" >Proceed  (Total: ₹{getCartTotal()})</button>
+           <div className="sidebar-bottom">
+          <Link to="/checkout"  className="proceed-btn" onClick={toggleCart}>  <span>Total: ₹{getCartTotal()}</span> Proceed to Pay</Link>
           </div>
         </>
       )}
