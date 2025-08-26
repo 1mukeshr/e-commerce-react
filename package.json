@@ -1,6 +1,6 @@
 {
   "name": "parlour",
-  
+  "homepage": "https://github.com/1mukeshr/e-commerce-react.git",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,16 +10,19 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource/roboto": "^5.2.6",
     "@loadable/component": "^5.16.7",
+    "firebase": "^12.1.0",
+    "otp-input": "^1.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-inner-image-zoom": "^4.0.1",
     "react-medium-image-zoom": "^5.3.0",
-    "react-router-dom": "^7.8.0"
+    "react-otp-input": "^3.1.1",
+    "react-router-dom": "^7.8.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
